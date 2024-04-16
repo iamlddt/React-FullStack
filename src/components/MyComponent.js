@@ -12,12 +12,18 @@ class MyComponent extends React.Component {
     handleOnclick = (event) => {
         console.log('>> Click my button')
         console.log('My name is ', this.state.name)
+
+        // merge state => React class
+        this.setState({
+            name: 'Khue',
+            age: '27'
+        })
     };
 
     render() {
         return (
             <div>
-                My name is {this.state.name} and I'm from {this.state.address}
+                My name is {this.state.name} and I'm from {this.state.age}
                 <button onClick={(event) => { this.handleOnclick(event) }}>Click me</button>
             </div>
         )
