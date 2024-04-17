@@ -1,5 +1,6 @@
 import React from "react";
 import './Displayinfor.scss';
+import logo from './../logo.svg';
 
 class DisplayInfor extends React.Component {
 
@@ -19,7 +20,7 @@ class DisplayInfor extends React.Component {
 
         return (
             <div className="display-infor-container">
-
+                <img src={logo} alt="logo" />
                 <div>
                     <button
                         onClick={(event) => { this.handleShowHide(event) }}>
