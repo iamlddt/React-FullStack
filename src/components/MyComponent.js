@@ -1,5 +1,5 @@
 import React from "react";
-import UserInfor from "./Userinfor";
+import AddUserinfor from "./AddUserinfor";
 import DisplayInfor from "./DisplayInfor";
 
 
@@ -12,14 +12,25 @@ class MyComponent extends React.Component {
             { id: 3, name: 'Kem ', age: '5' },
             { id: 4, name: 'abc ', age: '100' }
         ]
+    };
+
+    handleAddNewUser = (userObj) => {
+        console.log('check data from parent ', userObj)
+        this.setState({
+            listUsers: [...this.state.listUsers, userObj]
+        })
     }
 
     render() {
         return (
             <div>
-                <UserInfor />
+                <AddUserinfor
+                    handleAddNewUser={this.handleAddNewUser}
+                />
                 <br></br>
-                <DisplayInfor listUsers={this.state.listUsers} />
+                <DisplayInfor
+                    listUsers={this.state.listUsers}
+                />
             </div>
         )
     }
