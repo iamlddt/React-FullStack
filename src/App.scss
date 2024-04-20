@@ -10,16 +10,101 @@ body {
 
 ;
 
+@media (min-width: 1600px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1550px !important;
+  }
+}
+
 .app-container {
   .header-container {
-    .navbar-nav {
+    .btn-login {
+      margin: 0 15px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      border: 1px solid #535353;
+
+      &:hover {
+        background-color: #e6e5e5;
+      }
+    }
+
+    .btn-signup {
+      padding: 8px 16px;
+      border-radius: 10px;
+      border: 1px solid #535353;
+      background-color: #000;
+      color: #fff;
+
+      &:hover {
+        background-color: #383434;
+      }
+    }
+
+    .navbar {
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0) !important;
+      padding-top: 20px;
 
       .nav-link {
         &.active {
           color: #00bfff;
         }
-
       }
+
+
+
     }
+  }
+
+  .homepage-container {
+    .hompage-content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 100px;
+      margin-top: 100px;
+      width: 50%;
+      gap: 30px;
+
+      .title-1 {
+        font-size: 45px;
+        font-weight: 600;
+      }
+
+      .title-2 {
+        font-size: 25px;
+      }
+
+      .title-3 {
+        button {
+          border-radius: 10px;
+          padding: 12px 24px;
+          background-color: #000;
+          color: #fff;
+
+          &:hover {
+            background-color: #383434;
+          }
+
+        }
+      }
+
+
+    }
+  }
+
+  ;
+
+  video {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
   }
 }
