@@ -12,6 +12,7 @@ import {
 import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart } from 'react-icons/fa';
 import { MdDashboard } from "react-icons/md";
 import { DiReact } from "react-icons/di";
+import {Link} from "react-router-dom";
 import sidebarBg from '../../Assets/bg2.jpg';
 import "./SideBar.scss"
 
@@ -41,7 +42,7 @@ export const SideBar = (props) => {
                     >
                         <DiReact size={'3em'} color={'#00bfff'} />
                         <span>Quiz Product</span>
-
+                       
                     </div>
                 </SidebarHeader>
 
@@ -51,6 +52,7 @@ export const SideBar = (props) => {
                             icon={<MdDashboard />}
                         >
                             <span>Dashboard</span>
+                            <Link to="/Admin"/>
                         </MenuItem>
                     </Menu>
                     <Menu iconShape="circle">
@@ -58,7 +60,9 @@ export const SideBar = (props) => {
                             icon={<FaGem />}
                             title='Features'
                         >
-                            <MenuItem> Quản lý Users</MenuItem>
+                            <MenuItem> Quản lý Users
+                            <Link to="/Admin/manage-users"/>
+                            </MenuItem>
                             <MenuItem> Quản lý bài Quiz</MenuItem>
                             <MenuItem> Quản lý câu hỏi</MenuItem>
                         </SubMenu>
